@@ -27,10 +27,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import nl.knaw.huygens.pergamon.nlp.langident.CavnarTrenkle;
-import nl.knaw.huygens.pergamon.nlp.langident.CumulativeFrequency;
-import nl.knaw.huygens.pergamon.nlp.langident.LanguageGuesser;
-import nl.knaw.huygens.pergamon.nlp.langident.NaiveBayes;
+import nl.knaw.huygens.pergamon.nlp.langident.*;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -58,6 +55,7 @@ public class LangIdentApp extends Application<LangIdentConfig> {
     // (Naive Bayes models tend to get big because there's no feature selection).
     models.put("cavnartrenkle", new CavnarTrenkle().train(docs, labels));
     models.put("cumfreq", new CumulativeFrequency().train(docs, labels));
+    models.put("jtcl", new JTCLLanguageGuesser());
     models.put("naivebayes", new NaiveBayes().train(docs, labels));
   }
 

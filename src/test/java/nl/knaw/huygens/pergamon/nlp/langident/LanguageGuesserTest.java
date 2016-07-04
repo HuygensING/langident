@@ -30,7 +30,7 @@ import java.util.List;
 // Base class for language guesser tests. Actual test cases should call the test()
 // method on a specific LanguageGuesser instance.
 public class LanguageGuesserTest {
-  private static String[] english = new String[]{
+  protected static String[] english = new String[]{
     "IN Xanadu did Kubla Khan",
     "A stately pleasure-dome decree:",
     "Where Alph, the sacred river, ran",
@@ -38,14 +38,14 @@ public class LanguageGuesserTest {
     "Down to a sunless sea.",
   };
 
-  private static String[] dutch = new String[]{ //
+  protected static String[] dutch = new String[]{ //
     "Het hemelsche gerecht heeft zich ten langen leste",
     "Erbarremt over my en myn benauwde veste,",
     "En arme burgery, en op myn volcx gebed,",
     "En dagelix geschrey de bange stad ontzet."
   };
 
-  private static String[] italian = new String[]{
+  protected static String[] italian = new String[]{
     "Nel mezzo del cammin di nostra vita",
     "mi ritrovai per una selva oscura,",
     "ché la diritta via era smarrita.",
