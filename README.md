@@ -1,7 +1,7 @@
 Langident
 =========
 
-[![Docker Automated build](https://img.shields.io/docker/automated/huygensing/langident.svg)](https://hub.docker.com/r/huygensing/langident)
+[![Docker Automated build](https://img.shields.io/docker/automated/huygensing/langident.svg)](https://hub.docker.com/r/huygensing/langident) [![](https://images.microbadger.com/badges/image/huygensing/langident.svg)](https://microbadger.com/images/huygensing/langident "Get your own image badge on microbadger.com")
 
 This is a language guesser for historical text. It distinguishes between
 German, English, French, Latin and Dutch (that is, the seventeenth-century
@@ -85,3 +85,4 @@ To use a different model, pass it as a GET parameter:
 The list of known languages is available from the /ident/languages endpoint:
 
     curl http://localhost:8080/ident/languages?model=cavnartrenkle
+ 
